@@ -1,0 +1,28 @@
+:root {
+  /* colors */
+  --primary: #338bff;
+  --white: #ffffff;
+  --background: #f5f8fa;
+
+  --black: #000000;
+  --black-light: #16191a;
+
+  --grey: #879399;
+  --grey-light: #d8e2e6;
+
+  --danger-alert: #ff0000;
+  --danger-primary: #ff0004;
+  --danger-secondary: #ff3336;
+
+  --button-primary: linear-gradient(to left, #51c7fe, #338bff);
+  --button-secondary: var(--white);
+
+  /* borders */
+  --input-border-radius: 8px;
+  --button-border-radius: 80px;
+
+  /* font sizes */
+  --text-sm: 12px;
+  --text-md: 16px;
+  --text-lg: 18px;
+}
