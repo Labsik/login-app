@@ -57,14 +57,5 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-/* .container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 375px;
-  padding: 0px 12px;
-  height: 100dvh;
-} */
+}

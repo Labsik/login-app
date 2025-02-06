@@ -1,5 +1,5 @@
 export type Props = {
-  onClick: () => void;
+  onClick?: () => void;
   variant: "primary" | "secondary";
   children: React.ReactNode;
   disabled?: boolean;

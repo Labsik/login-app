@@ -25,17 +25,14 @@
   transition: border-color 0.2s ease-in-out;
 }
 
-/* Focused state */
 .inputField:focus {
   border-color: var(--primary);
 }
 
-/* Error state */
 .inputField.error {
   border-color: var(--danger-primary);
 }
 
-/* Placeholder styling */
 .inputPlaceholder {
   position: absolute;
   left: 12px;

@@ -1,16 +1,35 @@
-import { useState } from "react";
-
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import PrivatePages from "@routes/PrivatePages";
+import {
+  AppPrivateRoutes,
+  AppPublicRoutes,
+  IRoutes,
+  PrivateRoutes,
+  PublicRoutes,
+} from "@routes/routes";
+import { AuthGuard } from "@routes/AuthGuard";
 import "@styles/index.css";
-import { Input } from "@components/Input/Input";
-import { LoginPage } from "@pages/Login/LoginPage";
-import { Home } from "@pages/Home/Home";
 
 function App() {
   return (
-    <div className="page">
-      {/* <LoginPage /> */}
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<PrivatePages />}>
+          {PrivateRoutes?.map((route: IRoutes) => (
+            <Route element={route.element} key={route.path} path={route.path} />
+          ))}
+
+          <Route path="*" element={<Navigate to={AppPrivateRoutes.home} />} />
+        </Route>
+
+        <Route element={<AuthGuard />}>
+          {PublicRoutes?.map((route: IRoutes) => (
+            <Route element={route.element} key={route.path} path={route.path} />
+          ))}
+        </Route>
+        <Route path="*" element={<Navigate to={AppPublicRoutes.login} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,13 @@
+.alert {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--danger-alert);
+  color: var(--white);
+  font-size: var(--text-sm);
+  border-radius: var(--input-border-radius);
+  height: 53px;
+  padding-left: var(--text-sm);
+  gap: 10px;
+}
